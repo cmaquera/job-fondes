@@ -2,12 +2,9 @@ name: ⏱️ Job for save file on FTP
 
 on: 
   # Ejecutar job cada dia a las 10:00 am
-  #schedule:
-  #  - cron: "0 10 * * *"
-  push:
-    branches:
-      - main
-      
+  schedule:
+    - cron: "0 10 * * 1,2,3,4,5,6"
+
 jobs:
   download-file:
     name: 🎉 Download file
