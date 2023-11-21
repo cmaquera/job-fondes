@@ -12,7 +12,7 @@ load_dotenv()
 HOSTNAME = os.getenv('FTP_HOSTNAME')
 USERNAME = os.getenv('FTP_USERNAME')
 PASSWORD = os.getenv('FTP_PASSWORD')
-ANIO = '2020'
+ANIO = '2021'
 
 print('{} {} {}'.format(HOSTNAME, USERNAME, PASSWORD))
 
