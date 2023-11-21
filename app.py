@@ -114,18 +114,18 @@ def guradar_archivo_filtrado():
 
     # Obtener datos Locales
     print('Obtener datos Locales...')
-    data_initial = obtener_data_initial('2023', 'M')
+    data_initial = obtener_data_initial('2018', 'M')
     df_data_local = obtener_csv_data(data_initial)    
 
     # Obtener datos Regionales
     print('Obtener datos Regionales...') 
-    data_initial = obtener_data_initial('2023', 'R')
+    data_initial = obtener_data_initial('2018', 'R')
     data_body = obtener_data_body('ctl00$ctl00$CPH1$RptPH1$lstSector', 'ctl00$ctl00$CPH1$RptPH1$lstSector', '99', data_initial)
     df_data_regional = obtener_csv_data(data_body)
 
     # Obtener datos Nacionales    
     print('Obtener datos Nacionales...') 
-    data_initial = obtener_data_initial('2023', 'E')
+    data_initial = obtener_data_initial('2018', 'E')
     data_body = obtener_data_body('ctl00$ctl00$CPH1$RptPH1$lstSector', 'ctl00$ctl00$CPH1$RptPH1$lstSector', ['26', '36'], data_initial)
     data_body = obtener_data_body('ctl00$ctl00$CPH1$RptPH1$lstPliego', 'ctl00$ctl00$CPH1$RptPH1$lstPliego', ['026', '036'], data_body)
     data_body = obtener_data_body('ctl00$ctl00$CPH1$RptPH1$lstEjecutora', 'ctl00$ctl00$CPH1$RptPH1$lstEjecutora', ['470', '1072', '1078', '1250'], data_body)
